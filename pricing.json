@@ -1,0 +1,16 @@
+{
+  "areas": [
+    {
+      "areaId": "A1",
+      "demand": 120,
+      "supply": 50,
+      "surgeMultiplier": "2.40"
+    },
+    {
+      "areaId": "A2",
+      "demand": 80,
+      "supply": 100,
+      "surgeMultiplier": 1
+    }
+  ]
+}

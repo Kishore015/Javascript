@@ -1,0 +1,18 @@
+[
+  {
+    "driverId": "1234",
+    "startTime": "2024-12-01T08:30:00Z",
+    "endTime": "2024-12-01T09:15:00Z",
+    "distance": 0,
+    "fare": 20,
+    "error": true
+  },
+  {
+    "driverId": "1235",
+    "startTime": "2024-12-01T10:00:00Z",
+    "endTime": null,
+    "distance": 0,
+    "fare": 0,
+    "error": true
+  }
+]
