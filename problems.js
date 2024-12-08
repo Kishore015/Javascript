@@ -216,3 +216,102 @@ const result = (numx % 2  == 0) ? "even" : "odd";
     console.log(`The value of b after swapping: ${b}`);
 }
 swapValues(100,200)
+
+// Largest among 3 numbers
+function findLargestNumber(a,b,c){
+    if(a>b && a>c){
+        console.log(`${a} is largest Number`)
+    }else if(b>a && b>c){
+        console.log(`${b} is largest Number`)
+    }else{
+        console.log(`${c} is largest Number`)
+    }
+}
+findLargestNumber(1,2,3)
+
+// Using Math.max()
+const nums = [20,200,400];
+const largest = Math.max(...nums)
+console.log(`Largest number is ${largest}`)
+
+// Prime Number
+function checkPrime(num){
+    let isPrime = true;
+    if(num<=1){
+        console.log("Not a prime number")
+    }
+    else if(num>1){
+        for(i=2;i<=num/2;i++){
+            if(num%i==0){
+                isPrime = false;
+                break;
+            }
+        }
+        if(isPrime){
+            console.log("Prime number")
+        }else{
+            console.log("Not a prime number")
+        }
+    }
+    else{
+        console.log("Not a prime number")
+    }
+
+}
+checkPrime(73)
+
+// Prime Number between intervals
+const lowerNumber = 10;
+const higherNumber = 300;
+
+console.log(`The prime numbers between ${lowerNumber} and ${higherNumber} are:`);
+
+// looping from lowerNumber to higherNumber
+for (let i = lowerNumber; i <= higherNumber; i++) {
+    let flag = true;
+
+    // looping through 2 to user input number
+    for (let j = 2; j < i; j++) {
+        if (i % j == 0) {
+            flag = false;
+            break;
+        }
+    }
+    // if number greater than 1 and not divisible by other numbers
+    if (i > 1 && flag == true) {
+        console.log(i);
+    }else{
+        console.log("Number should be greater than 1")
+    }
+}
+
+// Factorial of a number
+const factNum = 15;
+if(num<0){
+    console.log(`Factorial for negative numbers doesn't exist`)
+}
+else if(num === 0){
+    console.log(`Factorial of 0 is 1`)
+}
+else{
+    let fact = 1;
+    for(let i=1;i<=factNum;i++){
+        fact = fact*i;
+    }
+}
+
+// Multiplication of a specific number
+const mulNum = 10;
+for(let i=1;i<=mulNum;i++){
+    console.log(`${mulNum} * ${i} = ${mulNum * i}`)
+}
+
+// Fibonnaci Sequence
+const febNum = 20;
+let n1=0,n2=1, nextTerm;
+for(let i=1;i<febNum;i++){
+    console.log(num1);
+    nextTerm = n1+n2;
+    n1 = n2;
+    n2 = nextTerm;
+}
