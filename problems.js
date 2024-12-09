@@ -315,3 +315,146 @@ for(let i=1;i<febNum;i++){
     n1 = n2;
     n2 = nextTerm;
 }
+
+// program to check an Armstrong number of three digits
+function checkArmstrongNum(num){
+    let sum = 0;
+    // create a temporary variable
+    let temp = num;
+    while (temp > 0) {
+        // finding the one's digit
+        let remainder = temp % 10;
+
+        sum += remainder * remainder * remainder;
+
+        // removing last digit from the number
+        temp = parseInt(temp / 10); // convert float into integer
+    }
+    // check the condition
+    if (sum == num) {
+        console.log(`${num} is an Armstrong number`);
+    }
+    else {
+        console.log(`${num} is not an Armstrong number.`);
+    }
+}
+
+function ArmStrong(num){
+    // program to check an Armstrong number of n digits
+
+// take an input
+    const number = new String(num);
+    const numberOfDigits = number.length;
+    let sum = 0;
+
+    // create a temporary variable
+    let temp = number;
+
+    while (temp > 0) {
+
+        let remainder = temp % 10;
+
+        sum += remainder ** numberOfDigits;
+
+        // removing last digit from the number
+        temp = parseInt(temp / 10); // convert float into integer
+    }
+
+    if (sum == number) {
+        console.log(`${number} is an Armstrong number`);
+    }
+    else {
+        console.log(`${number} is not an Armstrong number.`);
+    }
+}
+
+
+// program to find Armstrong number between intervals
+
+// take an input
+const lowNumber = parseInt(prompt('Enter a positive low integer value: '));
+const highNumber = parseInt(prompt('Enter a positive high integer value: '));
+
+console.log ('Armstrong Numbers:');
+
+// looping through lowNumber to highNumber
+for (let i = lowNumber; i <= highNumber; i++) {
+
+    // converting number to string 
+    let numberOfDigits = i.toString().length;
+
+    let sum = 0;
+
+    // create a temporary variable
+    let temp = i;
+
+    /* loop through a number to find if 
+    a number is an Armstrong number */
+    while (temp > 0) {
+
+        let remainder = temp % 10;
+        sum += remainder ** numberOfDigits;
+        // removing last digit from the number
+        temp = parseInt(temp / 10); // convert float into integer
+    }
+ 
+    if (sum == i) {
+        console.log(i);
+    }
+}
+
+
+// program to display the sum of natural numbers
+
+function naturalNumbers(num){
+    let sum = 0;
+// looping from i = 1 to number
+// in each iteration, i is increased by 1
+for (let i = 1; i <= num; i++) {
+    sum += i;
+}
+
+console.log('The sum of natural numbers:', sum);
+}
+
+naturalNumbers(100);
+
+/* program to check whether the last digit of three
+numbers is same */
+
+// take input
+const num_a = prompt('Enter a first integer: ');
+const num_b = prompt('Enter a second integer: ');
+const num_c = prompt('Enter a third integer: ');
+
+// find the last digit
+const result1 = a % 10;
+const result2 = b % 10;
+const result3 = c % 10;
+
+// compare the last digits
+if(result1 == result2 && result1 == result3) {
+    console.log(`${num_a}, ${num_b} and ${num_c} have the same last digit.`);
+}
+else {
+    console.log(`${num_a}, ${num_b} and ${num_c} have different last digit.`);
+}
+
+
+// program to find the HCF or GCD of two integers
+
+let hcf;
+// take input
+const number1 = 100;
+const number2 = 150;
+// looping from 1 to number1 and number2
+for (let i = 1; i <= number1 && i <= number2; i++) {
+
+    // check if is factor of both integers
+    if( number1 % i == 0 && number2 % i == 0) {
+        hcf = i;
+    }
+}
+
+// display the hcf
+console.log(`HCF of ${number1} and ${number2} is ${hcf}.`);
