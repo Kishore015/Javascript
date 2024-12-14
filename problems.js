@@ -492,3 +492,59 @@ for(let i = 1; i <= num; i++) {
         console.log(i);
     }
 }
+
+// Largest element in an array
+function findLargest(arr){
+    let largest_num = arr[0];
+    for(i=1;i<arr.length;i++){
+        if(arr[i]>largest_num){
+            largest_num = arr[i]
+        }
+    }
+    return largest_num;
+}
+console.log(findLargest([20,29,80,10,2,3]))
+
+// find smallest
+function findSmallest(arr){
+    let smallest_num = arr[0];
+    for(i=1;i<arr.length;i++){
+        if(arr[i]<smallest_num ){
+            smallest_num  = arr[i]
+        }
+    }
+    return smallest_num ;
+}
+console.log(findSmallest([20,29,80,10,2,3]))
+
+function findSubarrayWithSum(arr, s) {
+    let start = 0;
+    let currentSum = 0;
+
+    for (let end = 0; end < arr.length; end++) {
+        // Add the current element to the sum
+        currentSum += arr[end];
+
+        // Shrink the window from the left if currentSum exceeds s
+        while (currentSum > s && start <= end) {
+            currentSum -= arr[start];
+            start++;
+        }
+
+        // Check if currentSum equals the target sum
+        if (currentSum === s) {
+            return arr.slice(start, end + 1);
+        }
+    }
+
+    // If no subarray is found
+    return -1;
+}
+
+// Test the function
+const arr = [1, 2, 3, 7, 5];
+const s = 12;
+console.log(findSubarrayWithSum(arr, s)); // Output: [2, 3, 7]
+
+
+
