@@ -6,7 +6,7 @@ class Department {
     }
 }
 
-let d1 = new Department("Web-Dev", "HYD", {name: "Kishore", role: "Frontend"});
+let d1 = new Department("Web-Dev", "Hyderabad", {name: "Kishore", role: "Frontend"});
 let d2 = new Department("Web-Dev", "Bangalore", {name:"Prash", role:"Backend"})
 
 console.log(d1)
